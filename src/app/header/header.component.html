@@ -1,0 +1,20 @@
+<header>
+  <div class="container">
+    <a routerLink="/" class="logo">Zepto</a>
+    <nav>
+      <ul>
+        <li>
+          <a routerLink="/login">Login/Signup</a>
+        </li>
+        <li>
+          <a *ngIf="isMenuRequire" routerLink="/login">Logout</a>
+        </li>
+        <li>
+          <a *ngIf="isMenuRequire" routerLink="/cart-page">
+            Cart
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,66 @@
+{
+  "user": [
+    {
+      "id": "random1",
+      "name": "Vishal",
+      "password": "Vishal@12",
+      "email": "Vishal@gmail.com",
+      "Gender": "male",
+      "role": "admin",
+      "isactive": true
+    },
+    {
+      "id": "vishal134",
+      "name": "vishal",
+      "password": "Vishal@34",
+      "email": "vishal12@email.com",
+      "Gender": "male",
+      "role": "",
+      "isactive": false
+    },
+    {
+      "id": "random2",
+      "name": "Kushal",
+      "password": "Vishal@12",
+      "email": "Kushal@gmail.com",
+      "Gender": "male",
+      "role": "",
+      "isactive": true
+    },
+    {
+      "id": "random3",
+      "name": "Trishul",
+      "password": "Vishal@12",
+      "email": "Trishul@gmail.com",
+      "Gender": "male",
+      "role": "",
+      "isactive": false
+    },{
+      "id": "random4",
+      "name": "Anuv",
+      "password": "Vishal@12",
+      "email": "anuv@gmail.com",
+      "Gender": "male",
+      "role": "",
+      "isactive": false
+    },
+    {
+      "id": "random5",
+      "name": "Ravi",
+      "password": "Vishal@12",
+      "email": "ravi@gmail.com",
+      "Gender": "male",
+      "role": "",
+      "isactive": false
+    },
+    {
+      "id": "random6",
+      "name": "Rahul",
+      "password": "Vishal@12",
+      "email": "rahul@gmail.com",
+      "Gender": "male",
+      "role": "",
+      "isactive": false
+    }
+  ]
+}
