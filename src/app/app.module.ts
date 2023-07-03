@@ -21,6 +21,11 @@ import { RegisterComponent } from './register/register.component';
 import { UserlistingComponent } from './userlisting/userlisting.component';
 import { UpdatepopupComponent } from './updatepopup/updatepopup.component';
 import {MatButtonModule} from '@angular/material/button';
+import { FooterComponent } from './footer/footer.component';
+import { SliderComponent } from './slider/slider.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { HeroComponent } from './hero/hero.component';
+import { BannerComponent } from './banner/banner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +39,12 @@ import {MatButtonModule} from '@angular/material/button';
     LoginComponent,
     RegisterComponent,
     UserlistingComponent,
-    UpdatepopupComponent
+    UpdatepopupComponent,
+    FooterComponent,
+    SliderComponent,
+    CheckoutComponent,
+    HeroComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,

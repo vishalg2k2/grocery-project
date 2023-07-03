@@ -10,15 +10,22 @@ import { CartService } from '../services/cart/cart.service';
   styleUrls: ['./foodpage.component.css']
 })
 export class FoodpageComponent implements OnInit {
-items!:items;
+products!:items;
 
 constructor(private activatedRoute:ActivatedRoute,
   private itemService: ItemsService,
   private cartService: CartService,
   private router: Router) { 
   activatedRoute.params.subscribe((params) => {
-    if(params['id'])
-    this.items = itemService.getItemsById(params['id']);
+    if(params['id']) {
+    itemService.getItemsById(params['id']).subscribe(Response => {
+      this.products = Response;
+      console.log(Response)
+    })
+  }
+  else {
+    console.log("raale");
+  }
   })
 
   }
@@ -26,7 +33,7 @@ constructor(private activatedRoute:ActivatedRoute,
 ngOnInit(): void {
 }
 addToCart(){
-  this.cartService.addToCart(this.items);
+  this.cartService.addToCart(this.products);
   this.router.navigateByUrl('/cart-page');
 }
 

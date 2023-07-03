@@ -5,19 +5,29 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
-  baseAPI='http://localhost:3000/user'
+  baseAPI='http://127.0.0.1:8000/groc/create_user'
+  usersAPI='http://127.0.0.1:8000/groc/getUsers'
+  loginUrl='http://127.0.0.1:8000/groc/getUserByUsername/'
   constructor(private http:HttpClient) {
    }
 
-   getAll(){
-    return this.http.get(this.baseAPI);
+   getUserId(){
+    return sessionStorage.getItem('username');
    }
 
+   getAll(){
+    return this.http.get(this.usersAPI);
+   }
+   getALLRole(){
+    return this.http.get("http://localhost:3000/role");
+   }
    getById(id:any){
-    return this.http.get(this.baseAPI+'/'+id);
+    return this.http.get(this.loginUrl+id);
    }
 
    registerData(inputdata:any){
+    console.log(inputdata)
+
     return this.http.post(this.baseAPI,inputdata);
    }
 
@@ -32,5 +42,9 @@ export class AuthService {
    getUserRole(){
     return sessionStorage.getItem('role')!=null?sessionStorage.getItem('role')?.toString():'';
    }
+
+  //  getUserbyCode(){
+    
+  //  }
 
 }

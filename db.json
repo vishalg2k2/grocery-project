@@ -6,17 +6,16 @@
       "password": "Vishal@12",
       "email": "Vishal@gmail.com",
       "Gender": "male",
-      "role": "admin",
+      "role": "",
       "isactive": true
     },
     {
       "id": "vishal134",
-      "name": "vishal",
+      "name": "Viru",
       "password": "Vishal@34",
       "email": "vishal12@email.com",
       "Gender": "male",
-      "role": "",
-      "isactive": false
+      "isactive": true
     },
     {
       "id": "random2",
@@ -33,16 +32,17 @@
       "password": "Vishal@12",
       "email": "Trishul@gmail.com",
       "Gender": "male",
-      "role": "",
-      "isactive": false
-    },{
+      "role": "admin",
+      "isactive": true
+    },
+    {
       "id": "random4",
       "name": "Anuv",
       "password": "Vishal@12",
       "email": "anuv@gmail.com",
       "Gender": "male",
       "role": "",
-      "isactive": false
+      "isactive": true
     },
     {
       "id": "random5",
@@ -61,6 +61,16 @@
       "Gender": "male",
       "role": "",
       "isactive": false
+    }
+  ],
+  "role": [
+    {
+      "id": "customer",
+      "name": "Customer"
+    },
+    {
+      "id": "admin",
+      "name": "Admin"
     }
   ]
 }

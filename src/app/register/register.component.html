@@ -8,7 +8,7 @@
         <form class="example-form" [formGroup]="registerForm" (ngSubmit)="registration()">
             <mat-form-field class="example-full-width">
               <mat-label>Username</mat-label>
-              <input matInput placeholder="Type your username" formControlName="id">
+              <input matInput placeholder="Type your username" formControlName="username">
             </mat-form-field>
           
             <mat-form-field class="example-full-width">
@@ -41,7 +41,41 @@
     </mat-card-content>
 </div>
 
-</mat-card>   
+</mat-card> 
+
+<!--<div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+  <form class="example-form" [formGroup]="registerForm" (ngSubmit)="registration()">
+    <h3>Register Here</h3>
+  
+    <label for="username">Username</label>
+    <input type="text" formControlName="id" placeholder="Enter Username" id="username">
+
+    <label for="name">Name</label>
+    <input type="text" formControlName="name" placeholder="Enter your Name" id="name">
+  
+    <label for="password">Password</label>
+    <input type="password" formControlName="password" placeholder="Enter Password" id="password">
+    
+    <label for="email">Email</label>
+    <input type="text" formControlName="email" placeholder="something@email.com" id="email">
+
+    <mat-radio-group formControlName="gender" aria-level="Select an Option">
+        <mat-radio-button value="male">Male</mat-radio-button>
+        <mat-radio-button value="female">Female</mat-radio-button>
+    </mat-radio-group>
+
+    <button style="color: black" routerLink="/login">Submit</button>
+    <div class="social">
+      <div class="go" routerLink="/login"> <i class="fab fa-google"></i>Back to  Login</div>
+       
+    </div>
+  </form>-->
 
 
   

@@ -28,10 +28,11 @@ export class LoginComponent {
       this.service.getById(this.loginForm.value.username).subscribe(res=>{
         this.userData=res;
         console.log(this.userData)
-        if(this.userData.password === this.loginForm.value.password){
-          if(this.userData.isactive){
-            sessionStorage.setItem('username',this.userData.id)
-            sessionStorage.setItem('role',this.userData.role)
+        for(const obj of this.userData){
+        if(obj.password === this.loginForm.value.password){
+          if(obj.isactive){
+            sessionStorage.setItem('username',obj.username)
+            sessionStorage.setItem('role',obj.role)
             this.router.navigate([''])
           }
           else{
@@ -41,6 +42,7 @@ export class LoginComponent {
         else{
           this.toastr.error('Invalid Credentials')
         }
+      }
       })
     }else{
       this.toastr.warning('Please Enter Valid Data')

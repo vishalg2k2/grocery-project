@@ -1,11 +1,8 @@
 export class items{
-    id!:number;
+    Itemid!:number;
     name!:string;
+    image!:string;
     price!:number;
-    tags?:string[];
-    favorite:boolean = false;
-    stars:number = 0;
-    imageUrl!:string;
-    origins!:string[];
-    deliveryTime!:string;
+    tags?:string;
 }
+    

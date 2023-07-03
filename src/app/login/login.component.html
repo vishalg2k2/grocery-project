@@ -1,4 +1,4 @@
-<mat-card>
+<!--<mat-card>
 
     <div class="container">
     <mat-card-header>
@@ -26,4 +26,28 @@
     </mat-card-content>
 </div>
 
-</mat-card>  
+</mat-card>  -->
+
+<div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+  <form class="example-form" [formGroup]="loginForm" (ngSubmit)="login()">
+    <h3>Login Here</h3>
+  
+    <label for="username">Username</label>
+    <input type="text" formControlName="username" placeholder="Enter Valid Username" id="username">
+  
+    <label for="password">Password</label>
+    <input type="password" formControlName="password" placeholder="Enter Password" id="password">
+  
+    <button style="color: black" routerLink="">Log In</button>
+    <div class="social">
+      <div class="go" routerLink="/register"> <i class="fab fa-google"></i>  Register</div>
+       
+    </div>
+  </form>
+  

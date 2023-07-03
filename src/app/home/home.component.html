@@ -1,8 +1,10 @@
+<app-hero></app-hero>
 <app-search></app-search>
 <app-tags></app-tags>
-<app-not-found [visible]="!items || items.length <= 0" 
+<app-not-found [visible]="!products || products.length <= 0" 
 resetLinkText="Reset Search"></app-not-found>
-<ul>
+
+<!--<ul>
     <li *ngFor="let items of items">
        <a routerLink="/items/{{items.id}}"><img src="{{items.imageUrl}}" alt=""></a>
     <div class="content">
@@ -11,7 +13,7 @@ resetLinkText="Reset Search"></app-not-found>
         </div>
         <span class="favorite {{items.favorite?'':'not'}}">
             ❤
-        </span>
+        </span>-->
        <!--<div class="stars">
         <star-rating
         [value]="food.stars"
@@ -22,13 +24,13 @@ resetLinkText="Reset Search"></app-not-found>
         [readonly]="true">
        </star-rating>
        </div>-->
-        <div class="product-item-footer">
+        <!--<div class="product-item-footer">-->
             <!--<div class="origins">
                 <span *ngFor="let origin of food.origins">
                      {{origin}}
                 </span>
             </div>-->
-            <div class="delivery-time">
+            <!--<div class="delivery-time">
                 <span>🕒</span>
                 {{items.deliveryTime}}
             </div>
@@ -41,5 +43,27 @@ resetLinkText="Reset Search"></app-not-found>
     </div>
     </li>
 
-</ul>
+</ul>-->
 <!--<button (click)="signupsubmit()">Sign up</button>-->
+
+<section id="product1" class="section-p1">
+    <h2>Featured Products</h2>
+    <p>Most Brought in Last One Week!</p>
+    <div class="pro-container">
+        <ul >
+        <li *ngFor="let items of products">
+        <div class="pro">
+            <a routerLink="/items/{{items.Itemid}}"><img src="{{items.image}}" alt=""></a>
+            <div class="des">
+               <h5>{{items.name}}</h5>
+               <h4> {{items.price|currency}}</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+    </li >
+</ul>
+</div>
+
+
+</section>
+<app-banner></app-banner>

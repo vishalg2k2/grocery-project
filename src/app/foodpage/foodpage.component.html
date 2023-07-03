@@ -1,16 +1,16 @@
-<app-not-found [visible]="!items" notFoundMessage="Product Not Found!"
+<app-not-found [visible]="!products" notFoundMessage="Product Not Found!"
 resetLinkText="Back To Homepage"></app-not-found>
-<div *ngIf="items" class="container">
-    <img [src]="items.imageUrl" [alt]="items.name" />
+<div *ngIf="products" class="container">
+    <img [src]="products.image" [alt]="products.name" />
 
     <div class="details">
         <div class="header">
             <span class="name">
-                {{items.name}}
+                {{products.name}}
             </span>
-            <span class="favorite {{items.favorite?'':'not'}}">
+            <!-- <span class="favorite {{items.favorite?'':'not'}}">
                 ❤
-            </span>
+            </span> -->
         </div>
         <!--<div class="rating">
             <star-rating [value]="food.stars" [totalstars]="5" checkedcolor="red" uncheckedcolor="black" size="30px"
@@ -24,18 +24,18 @@ resetLinkText="Back To Homepage"></app-not-found>
             </span>
         </div>-->
 
-        <div class="tags">
-            <app-tags [foodPageTags]="items.tags" justifyContent="start"></app-tags>
-        </div>
+        <!-- <div class="tags">
+            <app-tags [foodPageTags]="products.tags" justifyContent="start"></app-tags>
+        </div> -->
 
-        <div class="delivery-time">
+        <!-- <div class="delivery-time">
             <span>
                 Time to deliver about <strong>{{items.deliveryTime}}</strong> minutes
             </span>
-        </div>
+        </div> -->
 
         <div class="price">
-            <span>{{items.price|currency}}</span>
+            <span>{{products.price|currency}}</span>
         </div>
 
         <button (click)="addToCart()">Add To Cart</button>

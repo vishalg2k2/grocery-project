@@ -30,15 +30,24 @@ export class UserlistingComponent {
        //this.dataSource.sort=this.sort;
     })
   }
-  updateuser(id:any){
-    this.dialog.open(UpdatepopupComponent),{
-      enterAnimationDuration:'1000ms',
-      exitAnimationDuration:'500ms',
-      width:'50%',
+  updateuser(code:any){
+    this.openDialog('1000ms','600ms',code)
+  }
+
+  openDialog(enteranimation:any,exitanimation:any,code:string){
+    const popup = this.dialog.open(UpdatepopupComponent,{
+      enterAnimationDuration:enteranimation,
+      exitAnimationDuration:exitanimation,
+      width:'20%',
       data:{
-      usercode:id
+        usercode:code
       }
-    }
+    });
+    popup.afterClosed().subscribe(res=>{
+      this.loadUser()
+
+    })
+
   }
 
 

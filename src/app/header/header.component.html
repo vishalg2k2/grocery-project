@@ -1,13 +1,13 @@
-<header>
+<!--<header *ngIf="isMenuRequire" >
   <div class="container">
     <a routerLink="/" class="logo">Zepto</a>
     <nav>
       <ul>
         <li>
-          <a routerLink="/login">Login/Signup</a>
+          <a *ngIf="isMenuRequire" routerLink="/login">Logout</a>
         </li>
         <li>
-          <a *ngIf="isMenuRequire" routerLink="/login">Logout</a>
+          <a *ngIf="isAdmin" routerLink="/user">users</a>
         </li>
         <li>
           <a *ngIf="isMenuRequire" routerLink="/cart-page">
@@ -18,3 +18,43 @@
     </nav>
   </div>
 </header>
+ 
+<header *ngIf="isMenuRequire" >
+  <section>
+      <div id="container">
+          <div id="shopName"><a routerLink="/">ZEPTO</a></div>
+              <div id="collection">
+                  <div id="Grocery"><a href="#"> MENU </a></div>
+                  <div id="Users"><a *ngIf="isAdmin" routerLink="/user"> USERS</a></div>
+              </div>
+              <div id="search">
+                  <i class="fas fa-search search"></i>
+                  <input type="text" id="input" name="searchBox" placeholder="Search item!">
+              </div>
+              <div id="user">
+                  <a *ngIf="isMenuRequire" routerLink="/cart-page"> <i class="fas fa-shopping-cart addedToCart"><div id="badge"> 0 </div></i></a>
+                  <a *ngIf="isMenuRequire"href="#"> <i class="fas fa-user-circle userIcon"></i> </a>
+              </div>
+              <div id="collection">
+                <div id="Grocery"><a routerLink="/login">Logout</a></div>
+            </div>
+      </div>
+
+  </section>
+</header>-->
+<header *ngIf="isMenuRequire">
+  <section id="header">
+    <a routerLink="/"><img src="/assets/images/logo.svg" class="logo" alt=""></a>
+
+    <div>
+      <ul id="navbar">
+        <li><a class ="active" routerLink='/'>Home</a></li>
+        <li><a routerLink='/user'>User</a></li>
+        <li><a routerLink='/'>Contact</a></li>
+        <li><a routerLink='/login'>Logout</a></li>
+        <li><a routerLink='/cart-page'><i class='fal fa-shopping-cart'></i></a></li>
+      </ul>
+    </div>
+
+  </section>
+  </header>
